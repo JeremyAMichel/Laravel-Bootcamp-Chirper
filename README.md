@@ -8,4 +8,10 @@
 </p>
 
 
-# hello world
+# Laravel Bootcamp - Chirper
+
+This is a microblogging platform, which allows me to learn Laravel
+
+## Sources
+
+* [Laravel Bootcamp](https://bootcamp.laravel.com/introduction)
