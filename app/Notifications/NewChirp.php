@@ -5,7 +5,6 @@ namespace App\Notifications;
 use App\Models\Chirp;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Str;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -40,7 +39,7 @@ class NewChirp extends Notification
                     ->subject("New Chirp from {$this->chirp->user->name}")
                     ->greeting("New Chirp from {$this->chirp->user->name}")
                     ->line(Str::limit($this->chirp->message, 50))
-                    ->action('Go to Chirper', url('/'))
+                    ->action('Go to Chirper', route('chirps.index', [], true))
                     ->line('Thank you for using our application!');
     }
 
